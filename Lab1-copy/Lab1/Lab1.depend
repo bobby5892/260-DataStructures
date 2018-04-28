@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1522863777 source:c:\users\rob\documents\cs260 data structures\lab1\main.cpp
+	<iostream>
+	<iomanip>
+	<stdexcept>
+	"ArrayInt.h"
+
+1522857765 c:\users\rob\documents\cs260 data structures\lab1\include\arrayint.h
+
+1522864152 source:c:\users\rob\documents\cs260 data structures\lab1\src\arrayint.cpp
+	"ArrayInt.h"
+	<stdexcept>
+	<iostream>
+	<ostream>
+	<string>
+
+1522864435 source:c:\users\rob\documents\cs260 data structures\lab1-copy\lab1\main.cpp
+	<iostream>
+	<iomanip>
+	<stdexcept>
+	"ArrayInt.h"
+
+1522857765 c:\users\rob\documents\cs260 data structures\lab1-copy\lab1\include\arrayint.h
+
+1523376441 source:c:\users\rob\documents\cs260 data structures\lab1-copy\lab1\src\arrayint.cpp
+	"ArrayInt.h"
+	<stdexcept>
+	<iostream>
+	<ostream>
+	<string>
+

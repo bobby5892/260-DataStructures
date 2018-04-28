@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522875733 source:c:\users\rob\documents\cs260 data structures\sorts\main.cpp
+	<iostream>
+	<cstdlib>
+	<algorithm>
+

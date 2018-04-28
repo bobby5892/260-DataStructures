@@ -1,0 +1,55 @@
+Reverse Polish Notation
+
+Equation
+ax(b+c)/d
+
+Put on Stack
+Left Param ->stack
+operand -> ouput
+operator -> stack
+right parent -> pop
+
+Stack = 
+* 1
+output =
+abc+d/*
+
+Ordered
+
+a
+(b+c)
+d
+
+
+
+------------------------------------
+So Parseing
+abc+d/*
+
+
+Binary trees
+
+3 traversals
+pre-order (prefix)
+self
+left
+right
+
+In Order (infix)
+left
+self
+right
+
+post-ordered (postfix)
+left
+right
+self
+
+
+
+----- deleting
+
+go right one step
+left as far as possible
+
+that value goes in the spot you deleted.
