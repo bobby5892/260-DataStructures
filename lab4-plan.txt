@@ -1,0 +1,16 @@
+Create Binary Tree Class (As Int) [ All in the .h File ]
+Test by Pushing values to tree then checking pre determined routes for match
+Convert Tree Class to Template
+Create Polish Parse - that uses stack and prints a string out of the polish - compare to example found online
+
+Push Polish Equation to tree
+
+Code Postfix-Traversal (Polish)
+Code Prefix-Traversal 
+Try Infix-Traversal
+
+
+Depth First Traversals:
+(a) Inorder (Left, Root, Right) : 4 2 5 1 3
+(b) Preorder (Root, Left, Right) : 1 2 4 5 3
+(c) Postorder (Left, Right, Root) : 4 5 2 3 1
