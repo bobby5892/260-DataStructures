@@ -71,6 +71,13 @@ namespace Lab4UnitTests
 			tree->insertItem(6);
 			Assert::AreEqual(6, tree->recFindHome(6)->getValue());
 		}
+		TEST_METHOD(TestBasicDelete) {
+			Tree<int>* tree = new Tree<int>();
+			tree->insertItem(5);
+			tree->removeItem(5);
+			Assert::isTrue(tree->root == nullptr);
+		}
+
 
 	};
 }

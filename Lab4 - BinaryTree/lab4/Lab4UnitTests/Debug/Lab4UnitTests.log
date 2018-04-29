@@ -1,4 +1,4 @@
 ﻿  unittest1.cpp
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(102): warning C4715: 'Tree<int>::recFindHome': not all control paths return a value
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(83): warning C4715: 'Tree<int>::recInsert': not all control paths return a value
-  Lab4UnitTests.vcxproj -> C:\Users\Cassandra\Documents\GitHub\260-DataStructures\Lab4 - BinaryTree\lab4\Debug\Lab4UnitTests.dll
+c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4unittests\unittest1.cpp(78): error C2039: 'isTrue': is not a member of 'Microsoft::VisualStudio::CppUnitTestFramework::Assert'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\auxiliary\vs\unittest\include\cppunittestassert.h(121): note: see declaration of 'Microsoft::VisualStudio::CppUnitTestFramework::Assert'
+c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4unittests\unittest1.cpp(78): error C3861: 'isTrue': identifier not found
