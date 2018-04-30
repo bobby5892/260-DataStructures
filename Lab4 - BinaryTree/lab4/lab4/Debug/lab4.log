@@ -1,10 +1,1 @@
-﻿  Tree.cpp
-  lab4.cpp
-  Generating Code...
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(97): warning C4715: 'Tree<int>::recFindHome': not all control paths return a value
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(78): warning C4715: 'Tree<int>::recInsert': not all control paths return a value
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(97): warning C4715: 'Tree<char>::recFindHome': not all control paths return a value
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(78): warning C4715: 'Tree<char>::recInsert': not all control paths return a value
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(78): warning C4715: 'Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::recInsert': not all control paths return a value
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(97): warning C4715: 'Tree<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::recFindHome': not all control paths return a value
-  lab4.vcxproj -> C:\Users\Cassandra\Documents\GitHub\260-DataStructures\Lab4 - BinaryTree\lab4\Debug\lab4.exe
+﻿  lab4.vcxproj -> C:\Users\Rob\Documents\CS260 Data Structures\260-DataStructures\Lab4 - BinaryTree\lab4\Debug\lab4.exe
