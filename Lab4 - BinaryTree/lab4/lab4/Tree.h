@@ -8,20 +8,16 @@ private:
 	T value;
 	Node<T>* left;
 	Node<T>* right;
-	
-
 public:
 	/// Default Constructor
 	Node() {
 		this->right = this->left = nullptr;
-		
 	}
 	/// Overloaded Constructor
 	Node(Node<T>* left, Node<T>* right, T value) {
 		this->left = left;
 		this->right = right;
 		this->value = value;
-		
 	}
 	/// Getter Methods
 	Node<T>* getLeft() { return this->left; }
@@ -34,7 +30,6 @@ public:
 };
 template <typename T> class Tree
 {
-
 public:
 	Tree() {
 		// Plant a root
@@ -49,17 +44,11 @@ public:
 		if(this->root == nullptr)
 			root = new Node<T>(nullptr, nullptr, n);
 		else {
-
 			Node<T>* ptr = recInsert(n, this->root);
 			ptr = new Node<T>(nullptr, nullptr, n);
 		}
-		
-		
-		
 	}
-	
 	Node<T>* recFindHome(T n) {
-	
 		return recFindHome(n, this->root);
 	}
 	Node<T>* recInsert(T n, Node<T>* ptr) {
@@ -87,8 +76,7 @@ public:
 			}
 		}
 	}
-	// optional method - not implemented
-	Node<T>* recFindHome(T n, Node<T>* ptr, bool previous = false) {
+	Node<T>* recFindHome(T n, Node<T>* ptr) {
 		// If the node we are looking at is empty - the number obviously goes there
 		if (ptr == nullptr) {
 			//ptr = new Node(nullptr, nullptr, T n);
@@ -113,14 +101,11 @@ public:
 		}
 		return temp;
 	}
-
 	Node<T>* removeItem(T n, Node<T>* temp) {
-
 		// Rare base case
 		if (temp == nullptr) {
 			return nullptr;
 		}
-
 		if (n < temp->getValue()) {
 			// Left of tree
 			temp->setLeft(  removeItem(n, temp->getLeft()) );
@@ -142,22 +127,16 @@ public:
 			}
 			// node with two child
 			// Lets get smallest in the current set
-			
 			Node<T>* smallTemp = getFarthestLeft(n, temp->getRight());
-
 			// move into successor 
 			temp->setValue(smallTemp->getValue());
-
 			// delete successor
 			temp->setRight(removeItem(n, smallTemp->getRight()));
-
 		}
 		return temp;
 	}
-
 	T removeItem(T n) {
 		Node<T>* temp;
-
 		temp = removeItem(n, this->root);
 		return  n;
 	}
@@ -185,18 +164,14 @@ public:
 		if (tempRoot->getRight() != nullptr) {
 			output << recPostfixTraversal(tempRoot->getRight()) << " ";
 		}
-		if( (std::to_string(tempRoot->getValue())) != ""){
-			output << tempRoot->getValue() << " ";
-		}		//(c) Postorder (Left, Right, Root) : 4 5 2 3 1
+		output << tempRoot->getValue() << " ";
+				//(c) Postorder (Left, Right, Root) : 4 5 2 3 1
 		return output.str();
-
 	}
 	std::string recPrefixTraversal(Node<T>* tempRoot) {
 		std::stringstream output;
-		if ((std::to_string(tempRoot->getValue())) != "") {
-			output << tempRoot->getValue() << " ";
-		}
-		if (tempRoot->getLeft() != nullptr) {
+		output << tempRoot->getValue() << " ";
+		if (tempRoot->getLeft() != nullptr  ) {
 			output << recPrefixTraversal(tempRoot->getLeft()) ;
 		}
 		if (tempRoot->getRight() != nullptr) {
@@ -209,9 +184,8 @@ public:
 		if (tempRoot->getLeft() != nullptr) {
 			output << recInfixTraversal(tempRoot->getLeft());
 		}
-		if ((std::to_string(tempRoot->getValue())) != "") {
-			output << tempRoot->getValue() << " ";
-		}		//(a) Inorder (Left, Root, Right) : 4 2 5 1 3
+		output << tempRoot->getValue() << " ";
+		//(a) Inorder (Left, Root, Right) : 4 2 5 1 3
 		if (tempRoot->getRight() != nullptr) {
 			output << recInfixTraversal(tempRoot->getRight());
 		}
