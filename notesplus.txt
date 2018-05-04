@@ -1,0 +1,29 @@
+heap - binary tree
+	complete
+	weakly ordered
+	all paths to le  
+Leafs filled left to right
+
+remove item O(log N)
+adding item O(log N) 
+
+heap sort
+(n log)(N)
+
+
+-------------------------
+
+2 3 4 trees
+Multiway Trees
+
+2 Tree
+
+	2
+      /   \
+     1     4
+
+3 Tree
+
+	3,6
+       / | \
+      1  4  7

@@ -1,5 +1,0 @@
-﻿  lab4.cpp
-  Tree.cpp
-  Generating Code...
-c:\users\cassandra\documents\github\260-datastructures\lab4 - binarytree\lab4\lab4\tree.h(62): warning C4715: 'Tree<int>::recFindHome': not all control paths return a value
-  lab4.vcxproj -> C:\Users\Cassandra\Documents\GitHub\260-DataStructures\Lab4 - BinaryTree\lab4\x64\Debug\lab4.exe
