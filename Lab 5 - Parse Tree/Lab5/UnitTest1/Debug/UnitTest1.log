@@ -1,0 +1,3 @@
+﻿  unittest1.cpp
+c:\users\cassandra\documents\github\260-datastructures\lab 5 - parse tree\lab5\lab5\parsetree.h(36): warning C4717: 'ParseTree::getPostString': recursive on all control paths, function will cause runtime stack overflow
+  UnitTest1.vcxproj -> C:\Users\Cassandra\Documents\GitHub\260-DataStructures\Lab 5 - Parse Tree\Lab5\Debug\UnitTest1.dll
