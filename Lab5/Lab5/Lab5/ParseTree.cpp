@@ -3,6 +3,7 @@
 #include <stack>
 #include <cctype>
 #include <iostream>
+#include <string>
 
 
 // constructor, build tree from expression
@@ -64,7 +65,9 @@ bool ParseTree::isOperand(char value)
 // helper method to do the parsing and save tree
 ParseNode* ParseTree::doParse(std::string exp)
 {
-
+	if (exp.length() == 0) {
+		throw std::out_of_range("Empty String");
+	}
 	//stack::push
 	//stack::empty
 	//stack::top
@@ -92,25 +95,36 @@ ParseNode* ParseTree::doParse(std::string exp)
 			newNode->value = exp[i];
 			newNode->left = nullptr;
 			newNode->right = nullptr;
-
-			ParseNode* fromStackRight = nodes.top();
-			nodes.pop();
-
-			// Attaching it to the right
-			newNode->right = fromStackRight;
-
-			ParseNode* fromStackLeft = nodes.top();
-			nodes.pop();
-
-			newNode->left = fromStackLeft;
+			if (!nodes.empty()) {
+				ParseNode* fromStackRight = nodes.top();
+				nodes.pop();
+				// Attaching it to the right
+				newNode->right = fromStackRight;
+			}
+			if (!nodes.empty()) {
+				ParseNode* fromStackLeft = nodes.top();
+				nodes.pop();
+				newNode->left = fromStackLeft;
+				nodes.push(newNode);
+			}
+		}
+		else {
+			ParseNode* newNode = new ParseNode;
+			newNode->value = exp[i];
+			newNode->left = nullptr;
+			newNode->right = nullptr;
 			nodes.push(newNode);
 		}
 		//if it is anything else, ignore it
 	}
 	//when the expression is fully processed, there should be one item on the stack.Pop it and return it.
-	ParseNode* temp = nodes.top();
-	nodes.pop();
-	return temp;
+	if (!nodes.empty()) {
+		ParseNode* temp = nodes.top();
+		nodes.pop();
+		return temp;
+	}
+	
+	return nullptr;
 }
 
 // recursive helper methods
@@ -131,9 +145,9 @@ std::string ParseTree::recInOrder(ParseNode * ptr)
 std::string ParseTree::recPostOrder(ParseNode * ptr)
 {
 	std::string output = "";
-	if (ptr->left != nullptr) { output += recInOrder(ptr->left); }
-	output += recInOrder(ptr->right);
-	if (ptr->right != nullptr) { output += ptr->value; }
+	if (ptr->left != nullptr)  { output += recInOrder(ptr->left); }
+	if (ptr->right != nullptr) { output += recInOrder(ptr->right); }
+	output += ptr->value; 
 	return output;
 }
 std::string ParseTree::recPreOrder(ParseNode * ptr)
