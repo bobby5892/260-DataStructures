@@ -8,7 +8,8 @@ void ParseTree::init() {
 	// Setup our stack
 	this->stackHead = nullptr;
 	// initialize strings
-	this->baseString = this->postString = "";
+	this->baseString = "";
+	this->postString = "";
 }
 /// Default Constructor
 ParseTree::ParseTree()
@@ -34,54 +35,81 @@ ParseTree::ParseTree(std::string equation) {
 
 // Parse Method
 void ParseTree::recParseAdd(std::string equation, int position) {
-	// If we are at the end - POP the rest off
-	if (position+1 == equation.length()) {
+	if (this->getPrecedence(equation[position]) == -1) {
+		this->stackAdd(equation[position]);
+	}
+	// if its an operator pop it all then add it
+	else if (this->getPrecedence(equation[position] > 2)) {
+		while (this->stackHead != nullptr) {
+			switch (this->stackPop()) {
+				case '*':
+					break;
+				case '+':
+					break;
+				case '-':
+					break;
+				case '/':
+					break;
+			}
+		}
+	}
+	// if its a ) then pop it all
+	else if (this->getPrecedence(equation[position] == 1)) {
 		while (this->stackHead != nullptr) {
 			this->postString += this->stackPop();
 		}
 	}
-	// If your not at the beginning
-	if (position == 0) {
+	// if its an operand just add it
+	/*if (getPrecedence(equation[position]) == -1) {
 		this->postString += equation[position];
 	}
-	else{
-		// if its an operand just add it
-		if (getPrecedence(equation[position]) == -1) {
-			this->postString += equation[position];
+	else {
+		// Lets see if we have any operands on the stack
+		if (this->stackHead == nullptr) {
+			// Add it to the stack
+			this->stackAdd(equation[position]);
+		}
+		else if (getPrecedence(equation[position]) == 1) {
+			// should multipop until the current pos
+				this->multiPop(this->stackPop());
 		}
 		else {
-			// Lets see if we have any operands on the stack
-			if (this->stackHead == nullptr) {
-				// Add it to the stack
-				this->stackAdd(equation[position]);
+			// Now we need to check precedence 
+			if (getPrecedence(equation[position]) < getPrecedence(this->stackPeek())) {
+				// The operator we are comparing to whats on the stack is higher - we need to pop
+				this->multiPop(this->stackPop());
 			}
-			else {
-				// Now we need to check precedence 
-				if (getPrecedence(equation[position]) > getPrecedence(this->stackPeek())) {
-					// The operator we are comparing to whats on the stack is higher - we need to pop
-					while (
-							(getPrecedence(equation[position]) > getPrecedence(this->stackPeek()) )
-							&& (this->stackHead != nullptr)
-						) {
-						// pop
-						this->postString += this->stackPop();
-
-					}
-				}
-			}
+			// then put on stack
+			this->stackAdd(equation[position]);
+		}
+		
+	}
+	*/
+	// Lets do it again
+	if (position < equation.length()-1) {
+		recParseAdd(equation, ++position);
+	}
+	// If we are at the end - POP the rest off
+	if (position + 1 == equation.length()) {
+		while (this->stackHead != nullptr) {
+			this->postString += this->stackPop();
 		}
 	}
-	
-	//PEMDOS
-	
-	
+}
+//pops until it finds high precendence
+void ParseTree::multiPop(char justRemoved) {
+	this->postString += justRemoved;
+	if (this->stackHead != nullptr) {
+		while (getPrecedence(justRemoved) > getPrecedence(this->stackPeek())){
+			char result	= this->stackPop();
+			this->postString += result;
+			if (this->stackHead == nullptr) {
+				break;
+			}
 
-	// Lets do it again
-	if (position != equation.length()-1) {
-		recParseAdd(equation, position++);
+		}
 	}
 }
-//
 // Stack Add
 void ParseTree::stackAdd(char character) {
 	stackLink* newLink = new stackLink;
@@ -117,10 +145,10 @@ int ParseTree::getPrecedence(char character) {
 			return 4;
 			break;
 		case '/':
-			return 5;
+			return 4;
 			break;
 		case '+':
-			return 6;
+			return 7;
 			break;
 		case '-':
 			return 7;

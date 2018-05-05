@@ -46,21 +46,73 @@ namespace UnitTest1
 		}
 		TEST_METHOD(OneCharPolish) {
 			try {
-				ParseTree* tree = new ParseTree("A");
+				ParseTree* tree2 = new ParseTree("A");
 				std::string temp= "A";
-				Assert::AreEqual(temp, tree->getPostString());
+				Assert::AreEqual(temp, tree2->getPostString());
 			}
 			catch (...) {
-				//Assert::Fail();
+				//Assert::Fail;
 			}
 		}
 		TEST_METHOD(MoreCharPolish) {
 			try {
-				//ParseTree* tree = new ParseTree("01234");
-				//Assert::AreEqual((std::string) "01234", tree->getPostString());
+				ParseTree* tree = new ParseTree("01234");
+				Assert::AreEqual((std::string) "01234", tree->getPostString());
 			}
 			catch (...) {
-				//Assert::Fail();
+				//Assert::Fail;
+
+			}
+		}
+		TEST_METHOD(SimplePolish) {
+			try {
+				ParseTree* tree = new ParseTree("1+2");
+				Assert::AreEqual((std::string) "12+", tree->getPostString());
+			}
+			catch (...) {
+				//Assert::Fail;
+
+			}
+		}
+		TEST_METHOD(SimpleWithPolish) {
+			try {
+				ParseTree* tree = new ParseTree("1+2");
+				Assert::AreEqual((std::string) "12+", tree->getPostString());
+			}
+			catch (...) {
+				//Assert::Fail;
+
+			}
+		}
+		TEST_METHOD(SimpleWithMorePolish) {
+			try {
+				ParseTree* tree = new ParseTree("1+2+1+1+1");
+				Assert::AreEqual((std::string) "12111++++", tree->getPostString());
+			}
+			catch (...) {
+				//Assert::Fail;
+
+			}
+		}
+		TEST_METHOD(SimpleWithMoreAddMinusPolish) {
+			try {
+				ParseTree* tree = new ParseTree("1+2-1");
+				Assert::AreEqual((std::string) "12+1-", tree->getPostString());
+
+			}
+			catch (...) {
+				//Assert::Fail;
+
+			}
+		}
+		TEST_METHOD(SimpleWithMoreOperatorsPolish) {
+			try {
+				ParseTree* tree = new ParseTree("1+2*1/1+1");
+				Assert::AreEqual((std::string) "121*1/+1+", tree->getPostString());
+				
+			}
+			catch (...) {
+				//Assert::Fail;
 
 			}
 		}

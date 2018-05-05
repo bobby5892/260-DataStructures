@@ -20,6 +20,8 @@ public:
 	void stackAdd(char character);
 	// Stack Remove
 	char stackPop();
+	// Pop until high precedence
+	void multiPop(char justRemoved);
 	// Stack Peak
 	char stackPeek();
 	// Stack Empty
@@ -33,7 +35,7 @@ public:
 	void recParseAdd(std::string equation,int position=0);
 
 	// Get PolishString
-	std::string getPostString() { return this->getPostString(); }
+	std::string getPostString() { return this->postString; }
 
 	
 //public:
