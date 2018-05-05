@@ -62,72 +62,78 @@ bool ParseTree::isOperand(char value)
 }
 
 // helper method to do the parsing and save tree
-void ParseTree::doParse(std::string exp)
+ParseNode* ParseTree::doParse(std::string exp)
 {
-	recDoParse(exp, this->root);
-}
-ParseNode* ParseTree::recDoParse(std::string exp, ParseNode* ptr) {
-	std::string thisOne;
-	thisOne = exp.substr(0, 1);
-	exp = exp.substr(1, exp.length() - 1);
-	/*If the current token is a '(', add a new node as the left child of the current node,
-	and descend to the left child.*/
-	if (thisOne == "(") {
-		ParseNode* newNode = new ParseNode;
-		newNode->value = thisOne[0];
-		newNode->left = nullptr;
-		newNode->right = nullptr;
-		// Descend to child
-		recDoParse(exp, newNode->left);
-	}
-	/*If the current token is in the list['+', '-', '/', '*'],
-	set the root value of the current node to the operator represented
-	by the current token.
 
-	Add a new node as the right child of the current node and descend to the right child.*/
-	else if ((thisOne == "+") || (thisOne == "-") || (thisOne == "/") || (thisOne == "*")) {
-		ptr->value = thisOne[0];
-		ptr->right = new ParseNode;
-		recDoParse(exp, ptr->right);
+	//stack::push
+	//stack::empty
+	//stack::top
+	//stack::pop
+	
+	//create a stack of pointer to node(you can either use your own code for stack or use std::stack)
+	std::stack<ParseNode*> nodes;
+	
+	//for reach character in the string
+	for (int i = 0; i < exp.length(); i++) {
+		//if the character is an operand(letter or number) create a node containing it and push the node on the stack
+		if (exp[i] == '(') {
+			ParseNode* newNode = new ParseNode;
+			newNode->value = exp[i];
+			newNode->left = nullptr;
+			newNode->right = nullptr;
+			nodes.push(newNode);
+		}
+		//if the character is an operator ( +, -, *, / ) create a node containing it.
+		//pop the top item off the stack and attach as a right child,
+		//pop the top item off the stack and attach as a left child,
+		//push the operator node (root of this new subtree) on the stack
+		else if ((exp[i] == '+') || (exp[i] == '-') || (exp[i] == '*') || (exp[i] == '/'))  {
+			ParseNode* newNode = new ParseNode;
+			newNode->value = exp[i];
+			newNode->left = nullptr;
+			newNode->right = nullptr;
+
+			ParseNode* fromStackRight = nodes.top();
+			nodes.pop();
+
+			// Attaching it to the right
+			newNode->right = fromStackRight;
+
+			ParseNode* fromStackLeft = nodes.top();
+			nodes.pop();
+
+			newNode->left = fromStackLeft;
+			nodes.push(newNode);
+		}
+		//if it is anything else, ignore it
 	}
-/*
-	If the current token is a number, set the root value
-	of the current node to the number and return to the parent.
-*/
-	else if (isalnum(thisOne[0])) {
-		ptr->value = thisOne[0];
-		return nullptr;
-	}
-	/*
-	If the current token is a ')', go to the parent of the current node.
-	*/
-	else if (thisOne[0] = ')') {
-		return nullptr;
-	}
-	return nullptr;
+	//when the expression is fully processed, there should be one item on the stack.Pop it and return it.
+	ParseNode* temp = nodes.top();
+	nodes.pop();
+	return temp;
 }
 
 // recursive helper methods
 void ParseTree::recDestruct(ParseNode * ptr)
 {
-	recDestruct(ptr->left);
-	recDestruct(ptr->right);
+	if (ptr->left != nullptr ) { recDestruct(ptr->left); }
+	if (ptr->right != nullptr) { recDestruct(ptr->right); }
 	delete(ptr);
 }
 std::string ParseTree::recInOrder(ParseNode * ptr)
 {
 	std::string output = "";
-	output += recInOrder(ptr->left);
+	if (ptr->left != nullptr) { output += recInOrder(ptr->left); }
 	output += ptr->value;
-	output += recInOrder(ptr->right);
+	if (ptr->right != nullptr) { output += recInOrder(ptr->right); }
 	return output;
 }
 std::string ParseTree::recPostOrder(ParseNode * ptr)
 {
 	std::string output = "";
-	output += recInOrder(ptr->left);
+	if (ptr->left != nullptr) { output += recInOrder(ptr->left); }
 	output += recInOrder(ptr->right);
-	output += ptr->value;
+	if (ptr->right != nullptr) { output += ptr->value; }
 	return output;
 }
 std::string ParseTree::recPreOrder(ParseNode * ptr)

@@ -19,8 +19,8 @@ public:
 private:
 	ParseNode * root;
 
-	void doParse(std::string exp);
-	ParseNode* recDoParse(std::string exp, ParseNode* ptr);
+	ParseNode * doParse(std::string exp);
+	
 	void recDestruct(ParseNode * ptr);
 	std::string recInOrder(ParseNode * ptr);
 	std::string recPostOrder(ParseNode * ptr);
