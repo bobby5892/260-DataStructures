@@ -4,7 +4,7 @@
 #include <cctype>
 #include <iostream>
 #include <string>
-
+/* Robert Moore 5/4/2018 Parse Tree - Pushing nodes on stack and popping off for sorting*/
 
 // constructor, build tree from expression
 ParseTree::ParseTree(std::string expression)
