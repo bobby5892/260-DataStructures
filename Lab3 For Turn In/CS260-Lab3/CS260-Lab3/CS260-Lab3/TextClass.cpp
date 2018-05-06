@@ -161,7 +161,7 @@
 			}
 			this->iter = nullptr;
 		}
-		return found;
+		return false;
 	}
 
 	/* Return	true	if	list	is	empty, false	otherwise.
