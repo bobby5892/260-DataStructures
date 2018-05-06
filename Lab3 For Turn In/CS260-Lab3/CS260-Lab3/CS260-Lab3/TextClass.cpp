@@ -148,7 +148,6 @@
 			}
 			temp = temp->next;
 		}
-
 		// Look from beginning
 		if (!found) { 
 			temp = this->head;
@@ -162,7 +161,6 @@
 			}
 			this->iter = nullptr;
 		}
-
 		return found;
 	}
 
@@ -269,19 +267,9 @@
 		return output.str();
 	}
 	void TextClass::appendList(TextClass* list) {
-		// get data & reverse it
-		std::stringstream converter;
-		converter << std::noskipws;
-		converter.str(list->getList());
-		std::string y(converter.str());
-		std::string z(y.rbegin(), y.rend());
-		converter.str(z);
-		// using iterator on reversed string stream
-		std::istringstream ss(converter.str());
-		char i = ' ';
-		// while the iterator stringstream count is greater than 0 
-		while (ss >> std::noskipws >> i) {
-			this->insertHead(i);
+		std::string newList = list->getList();
+		for (int i = 0; i<newList.length(); i++) {
+			this->insertTail(newList[i]);
 		}
 	}
 	void TextClass::deleteLink(Link* link) {
