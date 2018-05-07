@@ -21,7 +21,7 @@ public:
 	Heap();
 	Heap(int howManyValues);
 	Heap(int starters[]);
-	void Heap::heapify();
+	void heapify();
 	~Heap();
 };
 

@@ -1,0 +1,15 @@
+Open addressing
+	linear probing
+	quadratic probing i* i
+	secondary hashing i hash2(elem)
+seperate chainging - storing linked list
+
+prime vs composite number
+
+less collisions w/ prime 
+
+rehash when growing array
+
+Array of linked list - works well
+
+value % arraysize

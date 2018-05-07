@@ -21,7 +21,7 @@ ParseTree::~ParseTree()
 // inorder traversal
 std::string ParseTree::inOrder()
 {
-	return recInOrder(this->root);
+	return  recInOrder(this->root) ;
 }
 
 // postorder traversal
@@ -136,10 +136,22 @@ void ParseTree::recDestruct(ParseNode * ptr)
 }
 std::string ParseTree::recInOrder(ParseNode * ptr)
 {
-	std::string output = "";
-	if (ptr->left != nullptr) { output += recInOrder(ptr->left); }
+	/*Note	that	your	in-order	traversal	(infix)	will	need	to	add	parentheses	to	the	output	to	
+avoid	generating	ambiguous	expressions.		You	can	do	this	by adding	an	opening	
+parenthesis	before	the	first	recursive	call	and	a	closing	parenthesis	after	the	second	
+recursive	call.	*/
+	std::string output;
+	bool needCloseParen = false;
+	if (ptr->left != nullptr) { 
+		output += "("+ recInOrder(ptr->left); 
+		needCloseParen = true;
+	}
 	output += ptr->value;
-	if (ptr->right != nullptr) { output += recInOrder(ptr->right); }
+	if (ptr->right != nullptr) { output +=  recInOrder(ptr->right) ; }
+	
+	if (needCloseParen) {
+		output += ")";
+	}
 	return output;
 }
 std::string ParseTree::recPostOrder(ParseNode * ptr)
