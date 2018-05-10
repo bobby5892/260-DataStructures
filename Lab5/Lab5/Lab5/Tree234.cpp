@@ -58,11 +58,11 @@ bool Tree234::recFind(int value, Node234* ptr)
 }
 
 // recursive display, called by display
-std::string Tree234::recDisplay(Node234 * thisNode, int level, int childNumber)
+std::string Tree234::recDisplay(Node234 * thisNode, int level, int childNumber, bool extraInfo = true)
 {
 	std::stringstream output;
 
-	output << "level=" << level << " child=" << childNumber << " ";
+	if (extraInfo) { output << "level=" << level << " child=" << childNumber << " "; }
 
 	output << thisNode->displayNode();               // display this node
 
@@ -72,13 +72,43 @@ std::string Tree234::recDisplay(Node234 * thisNode, int level, int childNumber)
 	{
 		Node234 * nextNode = thisNode->getChild(j);
 		if (nextNode != NULL)
-			output << recDisplay(nextNode, level + 1, j);
+			output << recDisplay(nextNode, level + 1, j, extraInfo);
 		else
 			break;
 	}
 	return output.str();
 }
+/* infix
+count = node->numValue;
+for(i=0;i<count;i++){
+	display child[i]
+	display value[i]
 
+display child[count]
+}
+*/
+std::string Tree234::recInfixDisplay(Node234 * thisNode, int level, int childNumber, bool extraInfo = true)
+{
+	std::stringstream output;
+
+	if (extraInfo) { output << "level=" << level << " child=" << childNumber << " "; }
+
+	
+	output << thisNode->displayNode();
+													 // call ourselves for each child of this node
+	int numValues = thisNode->getNumValues();
+	
+	for (int j = 0; j<numValues + 1; j++)
+	{
+		Node234 * nextNode = thisNode->getChild(j);
+		if (nextNode != NULL)
+			output << recInfixDisplay(nextNode, level + 1, j, extraInfo);
+		
+		
+	}
+
+	return output.str();
+}
 // split a node, private method used in insert
 // assumes the node is full
 void Tree234::split(Node234* ptr)
@@ -195,5 +225,6 @@ bool  Tree234::isThere(int value) {
 }
 
 std::string  Tree234::inOrder() {
-	 return this->recDisplay(root, 0, 0);
+	// Left/Center/Right
+	 return this->recInfixDisplay(root, 0, 0,false);
 }
