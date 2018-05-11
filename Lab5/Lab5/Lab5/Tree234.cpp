@@ -87,25 +87,19 @@ for(i=0;i<count;i++){
 display child[count]
 }
 */
-std::string Tree234::recInfixDisplay(Node234 * thisNode, int level, int childNumber, bool extraInfo = true)
+std::string Tree234::recInfixDisplay(Node234 * thisNode)
 {
 	std::stringstream output;
-
-	if (extraInfo) { output << "level=" << level << " child=" << childNumber << " "; }
-
-	
-	output << thisNode->displayNode();
-													 // call ourselves for each child of this node
-	int numValues = thisNode->getNumValues();
-	
-	for (int j = 0; j<numValues + 1; j++)
-	{
-		Node234 * nextNode = thisNode->getChild(j);
-		if (nextNode != NULL)
-			output << recInfixDisplay(nextNode, level + 1, j, extraInfo);
-		
+	if (thisNode == nullptr) {
+		return "";
+	}
+	int count = thisNode->getNumValues();
+	for (int i = 0; i < count; i++) {
+		output << recInfixDisplay(thisNode->getChild(i)) << " ";
+		output << thisNode->getValue(i) << " ";
 		
 	}
+	output << recInfixDisplay(thisNode->getChild(count)) << " ";
 
 	return output.str();
 }
@@ -226,5 +220,5 @@ bool  Tree234::isThere(int value) {
 
 std::string  Tree234::inOrder() {
 	// Left/Center/Right
-	 return this->recInfixDisplay(root, 0, 0,false);
+	 return this->recInfixDisplay(root);
 }

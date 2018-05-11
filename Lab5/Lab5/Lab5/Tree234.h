@@ -25,7 +25,7 @@ class Tree234 {
 
 	// recursive display
 	std::string recDisplay(Node234 * thisNode, int level, int childNumber, bool extraInfo);
-	std::string recInfixDisplay(Node234 * thisNode, int level, int childNumber, bool extraInfo);
+	std::string recInfixDisplay(Node234 * thisNode);
 	// split a node
 	void split(Node234* ptr);
 
