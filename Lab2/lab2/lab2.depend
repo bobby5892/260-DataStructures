@@ -22,3 +22,10 @@
 
 1523724254 c:\users\rob\documents\cs260 data structures\lab2\lab2\include\stack.h
 
+1523832320 source:c:\users\rob\documents\cs260 data structures\260-datastructures\lab2\lab2\main.cpp
+	<iostream>
+	<iomanip>
+	<stdexcept>
+	"Dequeue.h"
+	"Stack.h"
+

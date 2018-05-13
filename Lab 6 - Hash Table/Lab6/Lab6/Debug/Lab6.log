@@ -1,0 +1,17 @@
+﻿  Lab6.cpp
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(109): warning C4018: '<': signed/unsigned mismatch
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(103): note: while compiling class template member function 'int ChainHashTable<std::string>::index(T)'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(77): note: see reference to function template instantiation 'int ChainHashTable<std::string>::index(T)' being compiled
+          with
+          [
+              T=std::string
+          ]
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(121): note: see reference to class template instantiation 'ChainHashTable<std::string>' being compiled
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(111): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  chainHash.cpp
+  Generating Code...
+  Lab6.vcxproj -> C:\Users\Rob\Documents\CS260 Data Structures\260-DataStructures\Lab 6 - Hash Table\Lab6\Debug\Lab6.exe
