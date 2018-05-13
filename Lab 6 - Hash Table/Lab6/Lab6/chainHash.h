@@ -1,9 +1,16 @@
 #include <sstream>
+#include <iostream>
 #include <ostream>
 #include <string>
 #include <exception>
 #include <cmath>
 #pragma once
+/*
+
+LINK CLASS
+
+
+*/
 template <typename T> class Link {
 public:
 	Link() {
@@ -17,7 +24,9 @@ public:
 		return this->value;
 	}
 	std::string ToString() {
-		return "0";
+		std::istringstream iss(this->value);
+		std::cout << "debug: " << iss.str() << "end debug";
+		return iss.str();
 	}
 	void set(T value) {
 		this->value = value;
@@ -32,29 +41,34 @@ private:
 	Link<T>* next;
 	T value;
 };
-template <typename T> class ChainHashTable
-{
-public:
-	ChainHashTable(){
-		this->sizeOfData = 31;
-		this->data = new Link<T>[this->sizeOfData];
+/*
+
+LIST CLASS
+
+
+*/
+template <typename T> class List {
+public:	
+	List() {
+		this->head = nullptr;
 	}
-	ChainHashTable(int size) {
-		this->sizeOfData = size;
-		this->data = new Link<T>[this->sizeOfData];
+	void add(Link<T>* Link) {
+		Link<T>* temp = head;
+		head = Link;
+		head->setNext(temp);
 	}
-	bool findValue(T value) {
-		Link<T>* temp = (this->data + (this->index(value) % this->sizeOfData));
+	bool find(T value) {
+		Link<T>* temp = head;
 		while (temp != nullptr) {
-			if (temp->get() == value) {
-				return true;
+			if (temp->get == value) { 
+				return true; 
 			}
 			temp = temp->getNext();
 		}
 		return false;
 	}
 	bool removeValue(T value) {
-		Link<T>* temp = (this->data + (this->index(value) % this->sizeOfData));
+		Link<T>* temp = this->head;
 		Link<T>* prev = temp;
 		while (temp != nullptr) {
 			// Find the value
@@ -73,31 +87,60 @@ public:
 		}
 		return false;
 	}
-	void addValue(T value) {
-		int index = (this->index(value) % this->sizeOfData);
-		Link<T>* temp = (this->data + index);
-		// Move to open position - nullptr
+	std::string displayList() {
+		std::stringstream output;
+		Link<T>* temp = this->head;
 		while (temp != nullptr) {
-			temp = temp->getNext();
+			std::istringstream iss(this->value);
+			output << iss.str();
 		}
-		// put it there
-		temp = new Link<T>(nullptr, value);
+		return output;
+	}
+
+private:
+	Link<T>* head;
+};
+/*
+
+CHAIN HASH TABLE CLASS  
+
+
+*/
+template <typename T> class ChainHashTable
+{
+public:
+	ChainHashTable() {
+		this->sizeOfData = 31;
+		this->data = new List<T>[this->sizeOfData];
+	}
+	ChainHashTable(int size) {
+		this->sizeOfData = size;
+		this->data = new List<T>[this->sizeOfData];
+	}
+	bool findValue(T value) {
+		
+		return   location->find(value);
+	}
+	bool removeValue(T value) {
+		List<T>* location = this->data[this->index(value)];
+		return location->removeValue(value);
+	}
+	void addValue(T value) {
+		List<T> location = this->data[this->index(value)];
+		location.add(value);
 	}
 	// print out the table
 	std::string displayTable() {
-		std::stringstream  output;
+		std::stringstream output;
 		for (int i = 0; i < this->sizeOfData; i++) {
-			Link<T>* temp = (this->data + i);
-			while (temp != nullptr) {
-				output << temp->ToString() << " ";
-				temp = temp->getNext();
-			}
+			List<T> currentData = this->data[i];
+ 			output << currentData.displayList();
 		}
 		return output.str();
 	}
-	~ChainHashTable(){}
+	~ChainHashTable() {}
 private:
-	Link<T>* data;
+	List<T>* data;
 	int sizeOfData;
 	// Get an index for it
 	int index(T value) {
@@ -108,11 +151,10 @@ private:
 		// get ascii value
 		for (int i = 0; i < temp.length(); i++) {
 			// Multiply by 10 ^ i
-			asciiValue += pow(10,i)*(int)(temp[i]);
+			asciiValue += pow(10, i)*(int)(temp[i]);
 		}
-		
-		return asciiValue;
-	
+
+		return asciiValue % this->sizeOfData;
+
 	}
 };
-
