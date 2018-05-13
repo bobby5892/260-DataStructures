@@ -1,20 +1,17 @@
-﻿  chainHash.cpp
-  Lab6.cpp
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(130): error C2664: 'void List<T>::add(Link<T> *)': cannot convert argument 1 from 'std::string' to 'Link<T> *'
+﻿  Lab6.cpp
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(175): warning C4018: '<': signed/unsigned mismatch
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(169): note: while compiling class template member function 'int ChainHashTable<std::string>::index(T)'
           with
           [
               T=std::string
           ]
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(130): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(128): note: while compiling class template member function 'void ChainHashTable<std::string>::addValue(T)'
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(152): note: see reference to function template instantiation 'int ChainHashTable<std::string>::index(T)' being compiled
           with
           [
               T=std::string
           ]
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(127): note: see reference to function template instantiation 'void ChainHashTable<std::string>::addValue(T)' being compiled
-          with
-          [
-              T=std::string
-          ]
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(121): note: see reference to class template instantiation 'ChainHashTable<std::string>' being compiled
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(84): note: see reference to class template instantiation 'ChainHashTable<std::string>' being compiled
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(177): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  chainHash.cpp
   Generating Code...
+  Lab6.vcxproj -> C:\Users\Rob\Documents\CS260 Data Structures\260-DataStructures\Lab 6 - Hash Table\Lab6\Debug\Lab6.exe

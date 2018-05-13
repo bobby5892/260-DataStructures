@@ -6,6 +6,11 @@
 #include <cmath>
 #pragma once
 /*
+CHAINED HASH TABLE
+	ROBERT MOORE
+	5/13/2018
+*/
+/*
 
 LINK CLASS
 
@@ -24,9 +29,18 @@ public:
 		return this->value;
 	}
 	std::string ToString() {
+		// If its a string or char 
 		std::istringstream iss(this->value);
-		std::cout << "debug: " << iss.str() << "end debug";
-		return iss.str();
+		if (iss.str().length() == 0) {
+			// Might be a number
+			std::stringstream string;
+			
+			string << this->value;
+			return string.str();
+		}
+		else {
+			return iss.str();
+		}
 	}
 	void set(T value) {
 		this->value = value;
@@ -52,15 +66,15 @@ public:
 	List() {
 		this->head = nullptr;
 	}
-	void add(Link<T>* Link) {
+	void add(T value) {
 		Link<T>* temp = head;
-		head = Link;
+		head = new Link<T>(nullptr,value);
 		head->setNext(temp);
 	}
 	bool find(T value) {
 		Link<T>* temp = head;
 		while (temp != nullptr) {
-			if (temp->get == value) { 
+			if (temp->get() == value) { 
 				return true; 
 			}
 			temp = temp->getNext();
@@ -90,11 +104,20 @@ public:
 	std::string displayList() {
 		std::stringstream output;
 		Link<T>* temp = this->head;
-		while (temp != nullptr) {
-			std::istringstream iss(this->value);
+		if (temp != nullptr) {
+			std::istringstream iss(temp->ToString());
 			output << iss.str();
+			output << ",";
+			while (temp->getNext() != nullptr) {
+				std::istringstream iss(temp->ToString());
+				output << iss.str();
+				
+					output << ",";
+				
+				temp = temp->getNext();
+			}
 		}
-		return output;
+		return output.str();
 	}
 
 private:
@@ -118,23 +141,23 @@ public:
 		this->data = new List<T>[this->sizeOfData];
 	}
 	bool findValue(T value) {
-		
+		List<T>* location = &this->data[this->index(value)];
 		return   location->find(value);
 	}
 	bool removeValue(T value) {
-		List<T>* location = this->data[this->index(value)];
+		List<T>* location = &this->data[this->index(value)];
 		return location->removeValue(value);
 	}
 	void addValue(T value) {
-		List<T> location = this->data[this->index(value)];
-		location.add(value);
+		List<T>* location = &this->data[this->index(value)];
+		location->add(value);
 	}
 	// print out the table
 	std::string displayTable() {
 		std::stringstream output;
 		for (int i = 0; i < this->sizeOfData; i++) {
 			List<T> currentData = this->data[i];
- 			output << currentData.displayList();
+ 			output  << currentData.displayList();
 		}
 		return output.str();
 	}
@@ -153,8 +176,8 @@ private:
 			// Multiply by 10 ^ i
 			asciiValue += pow(10, i)*(int)(temp[i]);
 		}
-
-		return asciiValue % this->sizeOfData;
+		int hashedIndex = asciiValue % this->sizeOfData;
+		return hashedIndex;
 
 	}
 };
