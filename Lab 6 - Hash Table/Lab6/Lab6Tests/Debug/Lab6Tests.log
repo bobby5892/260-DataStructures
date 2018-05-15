@@ -1,17 +1,17 @@
 ﻿  chainHash.cpp
   unittest1.cpp
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(152): warning C4018: '<': signed/unsigned mismatch
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(146): note: while compiling class template member function 'int ChainHashTable<int>::index(T)'
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(175): warning C4018: '<': signed/unsigned mismatch
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(169): note: while compiling class template member function 'int ChainHashTable<int>::index(T)'
           with
           [
               T=int
           ]
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(129): note: see reference to function template instantiation 'int ChainHashTable<int>::index(T)' being compiled
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(152): note: see reference to function template instantiation 'int ChainHashTable<int>::index(T)' being compiled
           with
           [
               T=int
           ]
   c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6tests\unittest1.cpp(37): note: see reference to class template instantiation 'ChainHashTable<int>' being compiled
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(154): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(177): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   Generating Code...
   Lab6Tests.vcxproj -> C:\Users\Rob\Documents\CS260 Data Structures\260-DataStructures\Lab 6 - Hash Table\Lab6\Debug\Lab6Tests.dll

@@ -24,6 +24,9 @@
     <ClInclude Include="chainHash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OpenHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="chainHash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenHash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
