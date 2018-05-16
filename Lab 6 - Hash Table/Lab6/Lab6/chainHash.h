@@ -113,8 +113,8 @@ public:
 				output << iss.str();
 				
 					output << ",";
-				
 				temp = temp->getNext();
+				std::cout << " Moving for";
 			}
 		}
 		return output.str();

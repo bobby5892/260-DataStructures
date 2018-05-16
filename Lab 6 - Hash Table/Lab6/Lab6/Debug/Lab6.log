@@ -1,28 +1,31 @@
 ﻿  Lab6.cpp
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(95): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(66): note: while compiling class template member function 'bool OpenHash<std::string>::findValue(T)'
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(175): warning C4018: '<': signed/unsigned mismatch
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(169): note: while compiling class template member function 'int ChainHashTable<std::string>::index(T)'
           with
           [
               T=std::string
           ]
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(104): note: see reference to function template instantiation 'bool OpenHash<std::string>::findValue(T)' being compiled
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(152): note: see reference to function template instantiation 'int ChainHashTable<std::string>::index(T)' being compiled
           with
           [
               T=std::string
           ]
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(86): note: see reference to class template instantiation 'OpenHash<std::string>' being compiled
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(95): error C2227: left of '->theSize' must point to class/struct/union/generic type
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(69): error C2678: binary '==': no operator found which takes a left-hand operand of type 'int' (or there is no acceptable conversion)
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\system_error(370): note: could be 'bool std::operator ==(const std::error_condition &,const std::error_condition &) noexcept'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\system_error(364): note: or       'bool std::operator ==(const std::error_condition &,const std::error_code &) noexcept'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\system_error(358): note: or       'bool std::operator ==(const std::error_code &,const std::error_condition &) noexcept'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\system_error(352): note: or       'bool std::operator ==(const std::error_code &,const std::error_code &) noexcept'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\exception(329): note: or       'bool std::operator ==(const std::exception_ptr &,std::nullptr_t) noexcept'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\exception(324): note: or       'bool std::operator ==(std::nullptr_t,const std::exception_ptr &) noexcept'
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.13.26128\include\exception(319): note: or       'bool std::operator ==(const std::exception_ptr &,const std::exception_ptr &) noexcept'
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(69): note: while trying to match the argument list '(int, std::string)'
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(69): error C2446: '==': no conversion from 'std::string' to 'int'
-  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(69): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(86): note: see reference to class template instantiation 'ChainHashTable<std::string>' being compiled
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\chainhash.h(177): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(117): warning C4018: '<': signed/unsigned mismatch
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(111): note: while compiling class template member function 'int OpenHash<int>::hashValue(T,int)'
+          with
+          [
+              T=int
+          ]
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(75): note: see reference to function template instantiation 'int OpenHash<int>::hashValue(T,int)' being compiled
+          with
+          [
+              T=int
+          ]
+  c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\lab6.cpp(43): note: see reference to class template instantiation 'OpenHash<int>' being compiled
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.h(119): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   OpenHash.cpp
-c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.cpp(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\rob\documents\cs260 data structures\260-datastructures\lab 6 - hash table\lab6\lab6\openhash.cpp(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Generating Code...
+  Lab6.vcxproj -> C:\Users\Rob\Documents\CS260 Data Structures\260-DataStructures\Lab 6 - Hash Table\Lab6\Debug\Lab6.exe
