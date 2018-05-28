@@ -1,0 +1,92 @@
+﻿  lab2260.cpp
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(39): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(39): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(39): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(39): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(42): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(44): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(48): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(49): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(50): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(52): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(56): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(57): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(58): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(60): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(60): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(60): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(60): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(67): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(70): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(72): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(76): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(77): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(78): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(80): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(80): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(80): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(80): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(84): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(85): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(86): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(88): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(88): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(88): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(88): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(96): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(97): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(100): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(101): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(103): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(103): error C3861: 'setw': identifier not found
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(104): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(104): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(104): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(104): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(106): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(110): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(111): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(113): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(113): error C3861: 'setw': identifier not found
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(114): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(114): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(114): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(114): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(116): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(119): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(120): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(122): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(122): error C3861: 'setw': identifier not found
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(123): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(123): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(123): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(123): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(125): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(130): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(131): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(133): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(133): error C3861: 'setw': identifier not found
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(134): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(134): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(134): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(134): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(136): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(136): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(136): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(136): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(142): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(142): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(142): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(142): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(145): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(148): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(151): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(154): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(157): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(160): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(163): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(166): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(169): error C2065: 'cout': undeclared identifier
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(169): error C2563: mismatch in formal parameter list
+c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(169): error C2568: '<<': unable to resolve function overload
+  c:\users\rob\source\repos\lab2-260\lab2-260\lab2260.cpp(169): note: could be 'std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)'
